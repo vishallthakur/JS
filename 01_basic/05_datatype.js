@@ -44,4 +44,29 @@ const myFunction = function() {
     console.log("Hello World!")
 }
 
-console.log(typeof heros)
+// console.log(typeof heros)
+
+
+// =========================== Memory ===============================
+
+// Stack (Primitive), Heap (Non-Primitive)
+
+let testName = "vishal";
+
+let anotherName = testName;
+anotherName = "himanshu"
+
+// console.log(testName);
+// console.log(anotherName);
+
+let userOne = {
+    email: "user1@mail.com",
+    upi: "user1#ybl"
+}
+
+let userTwo = userOne
+
+userTwo.email = "user2@mail.com" // change in actual value
+
+console.log(userOne)
+console.log(userTwo)
