@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+
+<body style="background-color: #212121; color: #fff;">
+
+    <h2>Amizing image</h2>
+    <ul id="images">
+        <l1>
+            <img width="200px" id="photoshop"
+                src="https://images.pexels.com/photos/326502/pexels-photo-326502.jpeg?auto=compress&cs=tinysrgb&w=300"
+                alt="Photoshop">
+        </l1>
+        <l1>
+            <img width="200px" id="tree"
+                src="https://images.pexels.com/photos/3680219/pexels-photo-3680219.jpeg?auto=compress&cs=tinysrgb&w=300"
+                alt="">
+        </l1>
+        <l1>
+            <img width="200px" id="river"
+                src="https://images.pexels.com/photos/24186159/pexels-photo-24186159/free-photo-of-drinks-and-food-standing-on-a-blanket-in-sunlight.jpeg?auto=compress&cs=tinysrgb&w=300&lazy=load"
+                alt="">
+        </l1>
+        <l1>
+            <img width="200px" id="owl"
+                src="https://images.pexels.com/photos/53977/eagle-owl-raptor-falconry-owl-53977.jpeg?auto=compress&cs=tinysrgb&w=300"
+                alt="">
+        </l1>
+        <l1>
+            <img width="200px" id="player"
+                src="https://images.pexels.com/photos/159555/soccer-football-athlete-player-159555.jpeg?auto=compress&cs=tinysrgb&w=300"
+                alt="">
+        </l1>
+        <li>
+            <a style="color: aliceblue;" href="https://google.com" id="google">Google</a>
+        </li>
+    </ul>
+
+</body>
+
+<script>
+    // document.getElementById('owl').onclick = function() {
+    //     alert("owl clicked")
+    // }
+
+    // attachEvent()
+    // jQuery - on
+
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY,
+    // altkey, ctrlkey, shiftkey, ketCode
+
+    // document.getElementById('images').addEventListener('click', function (event) {
+    //     console.log("click inside the ul");
+    // }, false)
+
+    // document.getElementById('owl').addEventListener('click', function (event) {
+    //     console.log("owl clicked");
+    //     event.stopPropagation()
+    // }, false)
+
+    // document.getElementById('google').addEventListener('click', function (event) {
+    //     event.preventDefault()
+    //     event.stopPropagation()
+    //     console.log("google clicked")
+    // }, false)
+
+    document.getElementById('images').addEventListener('click', function (event) {
+        console.log(event.target.tagName);
+        if (event.target.tagName === "IMG") {
+            let removeIt = event.target.parentNode
+            removeIt.remove()
+        }
+        // removeIt.parentNode.removeChild(removeIt)
+    }, false)    
+
+
+
+</script>
+
+</html>
